@@ -1,0 +1,162 @@
+# projects.toml file describing inputs for dream2nix
+#
+# To re-generate this file, run:
+#   nix run .#detect-projects $source
+# ... where `$source` points to the source of your project.
+#
+# If the local flake is unavailable, alternatively execute the app from the
+# upstream dream2nix flake:
+#   nix run github:nix-community/dream2nix#detect-projects $source
+
+["core/lib/cdt"]
+name = "core/lib/cdt"
+relPath = "core/lib/cdt"
+subsystem = "nodejs"
+translator = "package-lock"
+translators = [ "package-lock",]
+
+["core/scripts/legacy-javascript"]
+name = "core/scripts/legacy-javascript"
+relPath = "core/scripts/legacy-javascript"
+subsystem = "nodejs"
+translator = "yarn-lock"
+translators = [ "yarn-lock", "package-json",]
+
+[custom-lighthouse-pptr-recipe]
+name = "custom-lighthouse-pptr-recipe"
+relPath = "docs/recipes/custom-gatherer-puppeteer"
+subsystem = "nodejs"
+translator = "package-json"
+translators = [ "package-json",]
+
+[custom-lighthouse-recipe]
+name = "custom-lighthouse-recipe"
+relPath = "docs/recipes/custom-audit"
+subsystem = "nodejs"
+translator = "package-json"
+translators = [ "package-json",]
+
+["docs/recipes"]
+name = "docs/recipes"
+relPath = "docs/recipes"
+subsystem = "nodejs"
+translator = "package-lock"
+translators = [ "package-lock",]
+
+["docs/recipes/auth"]
+name = "docs/recipes/auth"
+relPath = "docs/recipes/auth"
+subsystem = "nodejs"
+translator = "package-json"
+translators = [ "package-json",]
+
+["docs/recipes/integration-test"]
+name = "docs/recipes/integration-test"
+relPath = "docs/recipes/integration-test"
+subsystem = "nodejs"
+translator = "package-json"
+translators = [ "package-json",]
+
+["docs/recipes/type-checking"]
+name = "docs/recipes/type-checking"
+relPath = "docs/recipes/type-checking"
+subsystem = "nodejs"
+translator = "package-json"
+translators = [ "package-json",]
+
+[lighthouse]
+name = "lighthouse"
+relPath = ""
+subsystem = "nodejs"
+translator = "yarn-lock"
+translators = [ "yarn-lock", "package-json",]
+
+[lighthouse-logger]
+name = "lighthouse-logger"
+relPath = "lighthouse-logger"
+subsystem = "nodejs"
+translator = "package-json"
+translators = [ "package-json",]
+
+[lighthouse-plugin-config]
+name = "lighthouse-plugin-config"
+relPath = "core/test/fixtures/config/lighthouse-plugin-config-helper"
+subsystem = "nodejs"
+translator = "package-lock"
+translators = [ "package-lock",]
+
+[lighthouse-plugin-example]
+name = "lighthouse-plugin-example"
+relPath = "docs/recipes/lighthouse-plugin-example"
+subsystem = "nodejs"
+translator = "package-json"
+translators = [ "package-json",]
+
+[lighthouse-plugin-no-category]
+name = "lighthouse-plugin-no-category"
+relPath = "core/test/fixtures/config-plugins/lighthouse-plugin-no-category"
+subsystem = "nodejs"
+translator = "package-lock"
+translators = [ "package-lock",]
+
+[lighthouse-plugin-no-groups]
+name = "lighthouse-plugin-no-groups"
+relPath = "core/test/fixtures/config-plugins/lighthouse-plugin-no-groups"
+subsystem = "nodejs"
+translator = "package-lock"
+translators = [ "package-lock",]
+
+[lighthouse-plugin-simple]
+name = "lighthouse-plugin-simple"
+relPath = "core/test/fixtures/config-plugins/lighthouse-plugin-simple"
+subsystem = "nodejs"
+translator = "package-lock"
+translators = [ "package-lock",]
+
+[plugin-in-config-directory]
+name = "plugin-in-config-directory"
+relPath = "core/test/fixtures/config/config/node_modules/plugin-in-config-directory"
+subsystem = "nodejs"
+translator = "package-lock"
+translators = [ "package-lock",]
+
+[plugin-in-working-directory]
+name = "plugin-in-working-directory"
+relPath = "core/test/fixtures/config/node_modules/plugin-in-working-directory"
+subsystem = "nodejs"
+translator = "package-lock"
+translators = [ "package-lock",]
+
+["core/lib/cdt".subsystemInfo]
+
+["core/scripts/legacy-javascript".subsystemInfo]
+
+[custom-lighthouse-pptr-recipe.subsystemInfo]
+
+[custom-lighthouse-recipe.subsystemInfo]
+
+["docs/recipes".subsystemInfo]
+
+["docs/recipes/auth".subsystemInfo]
+
+["docs/recipes/integration-test".subsystemInfo]
+
+["docs/recipes/type-checking".subsystemInfo]
+
+[lighthouse.subsystemInfo]
+
+[lighthouse-logger.subsystemInfo]
+
+[lighthouse-plugin-config.subsystemInfo]
+
+[lighthouse-plugin-example.subsystemInfo]
+
+[lighthouse-plugin-no-category.subsystemInfo]
+
+[lighthouse-plugin-no-groups.subsystemInfo]
+
+[lighthouse-plugin-simple.subsystemInfo]
+
+[plugin-in-config-directory.subsystemInfo]
+
+[plugin-in-working-directory.subsystemInfo]

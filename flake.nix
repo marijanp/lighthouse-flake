@@ -9,7 +9,7 @@
       inherit (dream2nix.lib.makeFlakeOutputs {
         systems = [ "x86_64-linux" ];
         source = self.inputs.lighthouse-src;
-        autoProjects = true;
+        projects = ./projects.toml;
         config.projectRoot = ./.;
       }) packages;
     };
