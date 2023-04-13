@@ -17,6 +17,7 @@
         packageOverrides = {
           "lighthouse".updated.overrideAttrs = old: {
             nativeBuildInputs = old.nativeBuildInputs ++ [ pkgs.yarn ];
+            patches = [ ./reset-link.patch ];
             postBuild = "npm run build-all";
           };
         };

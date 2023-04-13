@@ -1,0 +1,13 @@
+diff --git a/package.json b/package.json
+index 5a72e4971..2aac624e2 100644
+--- a/package.json
++++ b/package.json
+@@ -31,7 +31,7 @@
+     "build-treemap": "node ./build/build-treemap.js",
+     "build-viewer": "node ./build/build-viewer.js",
+     "build-types": "yarn type-check && rsync -a .tmp/tsbuildinfo/ ./ --include='*.d.ts' --include='*.d.cts' --exclude='*.map' --exclude='*.tsbuildinfo'",
+-    "reset-link": "(yarn unlink || true) && yarn link && yarn link lighthouse",
++    "reset-link": "true",
+     "c8": "bash core/scripts/c8.sh",
+     "clean": "rm -r dist proto/scripts/*.json proto/scripts/*_pb2.* proto/scripts/*_pb.* proto/scripts/__pycache__ proto/scripts/*.pyc *.report.html *.report.dom.html *.report.json *.devtoolslog.json *.trace.json shared/localization/locales/*.ctc.json || true",
+     "clean-types": "git clean -xfq '*.d.ts' '*.d.cts' -e 'node_modules/' -e 'dist/' -e '.tmp/' -e '**/types/'",
