@@ -33,28 +33,28 @@ in
                 type = types.submodule {
                   options = {
                     performance = mkOption {
-                      type = types.float;
+                      type = types.numbers.between 0 1;
                       default = 0.9;
                       description = mdDoc ''
                         The minimal score that should be reached for *performance*.
                       '';
                     };
                     accessibility = mkOption {
-                      type = types.float;
+                      type = types.numbers.between 0 1;
                       default = 0.9;
                       description = mdDoc ''
                         The minimal score that should be reached for *accessibility*.
                       '';
                     };
                     seo = mkOption {
-                      type = types.float;
+                      type = types.numbers.between 0 1;
                       default = 0.9;
                       description = mdDoc ''
                         The minimal score that should be reached for *SEO*.
                       '';
                     };
                     bestPractices = mkOption {
-                      type = types.float;
+                      type = types.numbers.between 0 1;
                       default = 0.9;
                       description = mdDoc ''
                         The minimal score that should be reached for *best practices*.
