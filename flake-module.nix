@@ -74,6 +74,8 @@ in {
             inherit name;
             nodes = {
               server = { pkgs, config, ... }: {
+                virtualisation.cores = 4;
+
                 environment.variables.CHROME_PATH =
                   lib.getExe pkgs.ungoogled-chromium;
 
