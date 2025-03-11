@@ -1,90 +1,12 @@
 {
   "nodes": {
-    "crab-fit": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1690982468,
-        "narHash": "sha256-jy8BrJSHukRenPbZHw4nPx3cSi7E2GSg//WOXDh90mY=",
-        "owner": "GRA0007",
-        "repo": "crab.fit",
-        "rev": "628f9eefc300bf1ed3d6cc3323332c2ed9b8a350",
-        "type": "github"
-      },
-      "original": {
-        "owner": "GRA0007",
-        "repo": "crab.fit",
-        "type": "github"
-      }
-    },
-    "dream2nix": {
-      "inputs": {
-        "nixpkgs": "nixpkgs",
-        "purescript-overlay": "purescript-overlay",
-        "pyproject-nix": "pyproject-nix"
-      },
-      "locked": {
-        "lastModified": 1718908638,
-        "narHash": "sha256-Z2TjBnWCtODqt8oiL35lWFJAkEQKTQF4J3WN5NeG+OA=",
-        "owner": "nix-community",
-        "repo": "dream2nix",
-        "rev": "5e523a4e419a31dedae61443b9f78397e64eeea9",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nix-community",
-        "repo": "dream2nix",
-        "type": "github"
-      }
-    },
-    "dreampkgs": {
-      "inputs": {
-        "crab-fit": "crab-fit",
-        "dream2nix": "dream2nix",
-        "logchecker": "logchecker",
-        "nixpkgs": [
-          "dreampkgs",
-          "dream2nix",
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1719730046,
-        "narHash": "sha256-29g2YltjCkziAcsLq9wtNjZ3EC+gUTrhf73WUEDNiSM=",
-        "owner": "nix-community",
-        "repo": "dreampkgs",
-        "rev": "dde9480b9112374b465a6a2c1d6e94474c8b3988",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nix-community",
-        "repo": "dreampkgs",
-        "type": "github"
-      }
-    },
-    "logchecker": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1693771389,
-        "narHash": "sha256-o0Pw/w+NKeL6haB+gObTK2xMJ78ZuOj7lmoJruaAuWQ=",
-        "owner": "OPSnet",
-        "repo": "Logchecker",
-        "rev": "e71120ed6e39b69b69d6e30e0d2d4badef8fd1be",
-        "type": "github"
-      },
-      "original": {
-        "owner": "OPSnet",
-        "ref": "0.11.1",
-        "repo": "Logchecker",
-        "type": "github"
-      }
-    },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1718742829,
-        "narHash": "sha256-+H7PnuwEDDDxUMa3ItAcSRDK5+jfMJap/zHiuACyIfc=",
+        "lastModified": 1741462378,
+        "narHash": "sha256-ZF3YOjq+vTcH51S+qWa1oGA9FgmdJ67nTNPG2OIlXDc=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "37a45fb6993f14555f50b18fbcf4945b82a35707",
+        "rev": "2d9e4457f8e83120c9fdf6f1707ed0bc603e5ac9",
         "type": "github"
       },
       "original": {
@@ -94,76 +16,9 @@
         "type": "github"
       }
     },
-    "purescript-overlay": {
-      "inputs": {
-        "nixpkgs": [
-          "dreampkgs",
-          "dream2nix",
-          "nixpkgs"
-        ],
-        "slimlock": "slimlock"
-      },
-      "locked": {
-        "lastModified": 1696022621,
-        "narHash": "sha256-eMjFmsj2G1E0Q5XiibUNgFjTiSz0GxIeSSzzVdoN730=",
-        "owner": "thomashoneyman",
-        "repo": "purescript-overlay",
-        "rev": "047c7933abd6da8aa239904422e22d190ce55ead",
-        "type": "github"
-      },
-      "original": {
-        "owner": "thomashoneyman",
-        "repo": "purescript-overlay",
-        "type": "github"
-      }
-    },
-    "pyproject-nix": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1702448246,
-        "narHash": "sha256-hFg5s/hoJFv7tDpiGvEvXP0UfFvFEDgTdyHIjDVHu1I=",
-        "owner": "davhau",
-        "repo": "pyproject.nix",
-        "rev": "5a06a2697b228c04dd2f35659b4b659ca74f7aeb",
-        "type": "github"
-      },
-      "original": {
-        "owner": "davhau",
-        "ref": "dream2nix",
-        "repo": "pyproject.nix",
-        "type": "github"
-      }
-    },
     "root": {
       "inputs": {
-        "dreampkgs": "dreampkgs",
-        "nixpkgs": [
-          "dreampkgs",
-          "nixpkgs"
-        ]
-      }
-    },
-    "slimlock": {
-      "inputs": {
-        "nixpkgs": [
-          "dreampkgs",
-          "dream2nix",
-          "purescript-overlay",
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1688610262,
-        "narHash": "sha256-Wg0ViDotFWGWqKIQzyYCgayeH8s4U1OZcTiWTQYdAp4=",
-        "owner": "thomashoneyman",
-        "repo": "slimlock",
-        "rev": "b5c6cdcaf636ebbebd0a1f32520929394493f1a6",
-        "type": "github"
-      },
-      "original": {
-        "owner": "thomashoneyman",
-        "repo": "slimlock",
-        "type": "github"
+        "nixpkgs": "nixpkgs"
       }
     }
   },
