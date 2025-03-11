@@ -1,9 +1,8 @@
 {
   inputs = {
-    dreampkgs.url = "github:nix-community/dreampkgs";
-    nixpkgs.follows = "dreampkgs/nixpkgs";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
   };
-  outputs = { nixpkgs, dreampkgs, ... }: {
+  outputs = { nixpkgs, ... }: {
     formatter."x86_64-linux" = nixpkgs.legacyPackages."x86_64-linux".nixfmt;
     templates.default = {
       path = ./templates/default;
@@ -11,8 +10,8 @@
     };
     flakeModule = {
       imports = [ ./flake-module.nix ];
-      perSystem = { system, ... }: {
-        lighthouse.package = dreampkgs.packages.${system}.lighthouse;
+      perSystem = { pkgs, ... }: {
+        lighthouse.package = pkgs.google-lighthouse;
       };
     };
   };

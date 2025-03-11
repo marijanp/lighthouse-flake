@@ -14,7 +14,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: DeterminateSystems/nix-installer-action@main
-      - uses: DeterminateSystems/magic-nix-cache-action@main
+      - uses: DeterminateSystems/flakehub-cache-action@main
 
       - name: System Info
         run: |
@@ -37,5 +37,7 @@ jobs:
           # since that is the branch of interest we want to test
           nix flake lock --override-input lighthouse-flake "github:marijanp/lighthouse-flake/$GITHUB_REF"
 
-          nix flake check -L
+          # don't use nix flake check for performance reasons
+          nix build .#checks."x86_64-linux".test-frontend -L
+          nix build .#checks."x86_64-linux".test-frontend-other -L
 
