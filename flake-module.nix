@@ -90,6 +90,7 @@ in {
                     tls = {
                       recommendations = "modern";
                       policy = "force";
+                      quic = { };
                       identity = [
                         {
                           key-file = pkgs.path + "/nixos/tests/common/acme/server/acme.test.key.pem";
@@ -110,7 +111,10 @@ in {
                 };
 
                 networking = {
-                  firewall.allowedTCPPorts = [ config.services.h2o.defaultTLSListenPort ];
+                  firewall = {
+                    allowedTCPPorts = [ config.services.h2o.defaultTLSListenPort ];
+                    allowedUDPPorts = [ config.services.h2o.defaultTLSListenPort ];
+                  };
                   extraHosts = ''
                     127.0.0.1 acme.test
                   '';
