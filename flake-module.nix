@@ -96,6 +96,10 @@ in {
                           certificate-file = pkgs.path + "/nixos/tests/common/acme/server/acme.test.cert.pem";
                         }
                       ];
+                      extraSettings = {
+                        # when using common ACME certs, disable talking to CA
+                        ocsp-update-interval = 0;
+                      };
                     };
                     settings = {
                       paths."/" = {
