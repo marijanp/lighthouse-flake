@@ -20,7 +20,12 @@ in {
             tests = mkOption {
               type = types.attrsOf (types.submodule {
                 options = {
-                  dist = mkOption { type = types.path; };
+                  dist = mkOption {
+                    type = types.path;
+                    description = ''
+                      Path to static directory to test. Great for static site generators.
+                    '';
+                  };
 
                   categories = mkOption {
                     default = { };
