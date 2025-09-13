@@ -84,7 +84,8 @@ in {
                   settings = {
                      compress = "ON";
                      http2-reprioritize-blocking-assets = "ON";
-                     ssl-offload = "kernel";
+                     ssl-offload = if pkgs.stdenv.isLinux then "kernel" else "OFF";
+                     "file.io_uring" = if pkgs.stdenv.isLinux then "ON" else "OFF";
                   };
                   hosts."acme.test" = {
                     tls = {
